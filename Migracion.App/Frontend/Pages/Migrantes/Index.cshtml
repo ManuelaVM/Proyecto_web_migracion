@@ -1,0 +1,88 @@
+﻿@page
+@model Frontend.Pages.Migrantes.IndexModel
+@using Persistencia
+@using Dominio
+@{
+}
+ 
+<h1>Registro Migrantes</h1>
+
+<p>Al momento de hacer el registro tener en cuenta que sus datos de nacimineto y origen son obligatorios</p>
+<p>de poner ya que de lo contrario no se llenara el formulario</p>
+ <form method="post">
+    <label for="fname">Nombre:</label>
+    <input asp-for="migrante.Nombre" ><br>
+
+    <label for="lname">Apellidos:</label>
+    <input asp-for="migrante.Apellidos" ><br>
+
+    <label for="lidenti">Tipo de identificacion:</label><br>
+    @Html.RadioButtonFor(m => m.migrante.Tipo_identificacion,"Cedula")<label>cedula</label><br>
+    @Html.RadioButtonFor(m => m.migrante.Tipo_identificacion,"Tarjeta de identidad")<label> Tarjeta de identidad</label><br>
+    @Html.RadioButtonFor(m => m.migrante.Tipo_identificacion,"Registro civil")<label> Registro civil</label><br>
+    @Html.RadioButtonFor(m => m.migrante.Tipo_identificacion,"Cedula de extranjeria")<label> Cedula de extranjeria</label><br>
+    @Html.RadioButtonFor(m => m.migrante.Tipo_identificacion,"Pasaporte")<label> Pasaporte</label><br>
+
+
+    @*<input asp-for="migrante.Tipo_identificacion" ><br>*@
+             @*<input asp-for="migrante.Tipo_identificacion" type="radio" id="Tipo_i" name="Tipo_i" value="Tipo_i" checked="false">
+            <label for="Cedula">Cedula</label><br>
+            <input asp-for="migrante.Tipo_identificacion" type="radio" id="Tipo_i" name="Tipo_i" value="Tarjeta de identidad" checked="false">
+            <label for="Tarjeta de identidad">Tarjeta de identidad</label><br>
+            <input asp-for="migrante.Tipo_identificacion" type="radio" id="Tipo_i" name="Tipo_i" value="Registro civil" checked="false">
+            <label for="Registro civil">Registro civil</label><br>
+            <input asp-for="migrante.Tipo_identificacion" type="radio" id="Tipo_i" name="Tipo_i" value="Cedula de extranjeria" checked="false">
+            <label for="Cedula de extranjeria">Cedula de extranjeria</label><br>
+            <input asp-for="migrante.Tipo_identificacion" type="radio" id="Tipo_i" name="Tipo_i" value="Pasaporte" checked="false">
+            <label for="Pasaporte">Pasaporte</label><br>*@
+
+    <label for="lnumin">Numero de identificacion:</label>
+    <input asp-for="migrante.Numero_identificacion" ><br>
+
+    <label for="lpais">Pais de origen:</label>
+    <input asp-for="migrante.Pais_origen"><br>
+
+    <label for="ldate">Fecha de nacimineto:</label>
+    <input asp-for="migrante.Fecha_nacimiento"><br>
+
+
+    <label for="lcorreo">Direccion electronica:</label>
+    <input asp-for="migrante.Direccion_electronica"><br>
+
+    <label for="ltele">Numero de telefono:</label>
+    <input asp-for="migrante.Numero_telefono"><br>
+
+    <label for="ldiract">Direccion actual:</label>
+    <input asp-for="migrante.Direccion_actual"><br>
+
+    <label for="lciudad">Ciudad:</label>
+    <input asp-for="migrante.Ciudad"><br>
+
+    <label for="lsitua">Situacion laboral:</label>
+    <input asp-for="migrante.Situacion_laboral"><br>
+  
+<button type="submit">Register</button>
+ </form>
+
+
+
+            @*
+            <tr>
+                <th>@model.migrante.Nombre</th>
+                <th>@model.migrante.Apellidos</th>
+                <th>@model.migrante.Tipo_identificacion</th>
+                <th>@model.migrante.Numero_identificacion</th> 
+                <th>@migrante.Pais_origen</th> 
+                <th>@migrante.Fecha_nacimiento</th> 
+                <th>@migrante.Direccion_electronica</th> 
+                <th>@migrante.Numero_telefono</th> 
+                <th>@migrante.Direccion_actual</th> 
+                <th>@migrante.Ciudad</th> 
+                <th>@migrante.Situacion_laboral</th> 
+
+                
+                
+            </tr>
+            *@
+
+</table>  

@@ -1,0 +1,24 @@
+﻿@page
+@model Migracion.App.Frontend.Pages.Revaluar.IndexModel
+@{
+}
+
+<h1>Evaluacion <E-Migrant></E-Migrant></h1>
+ 
+<p>Señor usuario responda con sinceridad para mejorar nuestro servicio</p>
+ <form method="post">
+   
+ 
+    <label for="lidenti">Escala de Evaluacion de E-Migrant:</label><br>
+    @Html.RadioButtonFor(m => m.evaluar.Evaluacion,"Malo")<label>Malo</label><br>
+    @Html.RadioButtonFor(m => m.evaluar.Evaluacion,"Regular")<label>Regular</label><br>
+    @Html.RadioButtonFor(m => m.evaluar.Evaluacion,"Bueno")<label>Bueno</label><br>
+    @Html.RadioButtonFor(m => m.evaluar.Evaluacion,"Muy Bueno")<label>Muy Bueno</label><br>
+    @Html.RadioButtonFor(m => m.evaluar.Evaluacion,"Excelente")<label>Excelente</label><br>
+ 
+ 
+ <button type="submit">Register</button>
+ </form>
+ 
+ 
+</table>

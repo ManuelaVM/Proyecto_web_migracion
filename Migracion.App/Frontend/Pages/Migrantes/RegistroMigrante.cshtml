@@ -1,0 +1,65 @@
+﻿@page
+@using Dominio
+@model MyApp.Namespace.RegistroMigranteModel
+@{
+}
+<h1>Registro Migrantes</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="migrantes.Nombre"></label>
+        <input asp-for="migrantes.Nombre" class="form-control">
+        <span asp-validation-for="migrantes.Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="migrantes.Apellidos"></label>
+        <input asp-for="migrantes.Apellidos" class="form-control">
+        <span asp-validation-for="migrantes.Apellidos" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="migrantes.Tipo_identificacion"></label>
+        <input asp-for="migrantes.Tipo_identificacion" class="form-control">
+        <span asp-validation-for="migrantes.Tipo_identificacion" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="migrantes.Numero_identificacion"></label>
+        <input asp-for="migrantes.Numero_identificacion" class="form-control">
+        <span asp-validation-for="migrantes.Numero_identificacion" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="migrantes.Pais_origen"></label>
+        <input asp-for="migrantes.Pais_origen" class="form-control">
+        <span asp-validation-for="migrantes.Pais_origen" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="migrantes.Fecha_nacimiento"></label>
+        <input asp-for="migrantes.Fecha_nacimiento" class="form-control">
+        <span asp-validation-for="migrantes.Fecha_nacimiento" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="migrantes.Direccion_electronica"></label>
+        <input asp-for="migrantes.Direccion_electronica" class="form-control">
+        <span asp-validation-for="migrantes.Direccion_electronica" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="migrantes.Numero_telefono"></label>
+        <input asp-for="migrantes.Numero_telefono" class="form-control">
+        <span asp-validation-for="migrantes.Numero_telefono" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="migrantes.Direccion_actual"></label>
+        <input asp-for="migrantes.Direccion_actual" class="form-control">
+        <span asp-validation-for="migrantes.Direccion_actual" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="migrantes.Ciudad"></label>
+        <input asp-for="migrantes.Ciudad" class="form-control">
+        <span asp-validation-for="migrantes.Ciudad" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="migrantes.Situacion_laboral"></label>
+        <input asp-for="migrantes.Situacion_laboral" class="form-control">
+        <span asp-validation-for="migrantes.Situacion_laboral" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
+<a class="btn btn-secondary" asp-page="./Index">Volver</a>
